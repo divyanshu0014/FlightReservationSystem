@@ -1,8 +1,7 @@
 package com.Upgard_Java_Course;
 import java.util.Scanner;
 
-public class touristTicket {
-    private String pnr;
+public class touristTicket extends ticket {
     String[] selectedLocations = new String[5];
     private String hotelAddress = "Hotel abc,Abc city,Abc";
     Scanner sc = new Scanner(System.in);
@@ -11,13 +10,6 @@ public class touristTicket {
     String[] newarr = new String[6];
 
 
-    public String getPnr() {
-        return pnr;
-    }
-
-    public void setPnr(String pnr) {
-        this.pnr = pnr;
-    }
 
     public String getHotelAddress() {
         return hotelAddress;
@@ -29,13 +21,8 @@ public class touristTicket {
 
 
 
-    public touristTicket() {
-
-
-    }
-
-    touristTicket(String pnr, String hotelAddress, flight Flight){
-        this.pnr = pnr;
+        touristTicket(String pnr,String departurelocation, String departuredateAndTime, String destinationLocation, String status,String seatNumber , String hotelAddress, flight Flight){
+        super(pnr,destinationLocation,departurelocation,departuredateAndTime,status,seatNumber);
         this.hotelAddress = hotelAddress;
         this.Flight = Flight;
     }

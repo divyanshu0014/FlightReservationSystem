@@ -1,12 +1,12 @@
 package com.Upgard_Java_Course;
 
-public class ticket {
+public abstract class ticket {
     private String pnrNumber;
     private String departureLocation;
     private String destinationLocation;
     private String departureDateAndTime;
     private String arrivalDateAndTime;
-    private String seatNUmber;
+    private String seatNumber;
     private String status;
     private int ticketPrice;
     private String flightDetails;
@@ -62,12 +62,12 @@ public class ticket {
         this.arrivalDateAndTime = arrivalDateAndTime;
     }
 
-    public String getSeatNUmber() {
-        return seatNUmber;
+    public String getSeatNumber() {
+        return seatNumber;
     }
 
-    public void setSeatNUmber(String seatNUmber) {
-        this.seatNUmber = seatNUmber;
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
     }
 
     public String getStatus() {
@@ -86,27 +86,24 @@ public class ticket {
         this.ticketPrice = ticketPrice;
     }
 
-    ticket(String pnr,passenger passenger,String departureDateAndTime,String departureLocation,String destinationLocation, String status, int ticketPrice,String seatNumber){
+//    ticket(){}
+
+//    ticket(String pnr,passenger passenger,String departureDateAndTime,String departureLocation,String destinationLocation, String status, int ticketPrice,String seatNumber){
+//        this.pnrNumber = pnr;
+//        this.Passenger = passenger;
+//        this.ticketPrice = ticketPrice;
+//        this.destinationLocation = destinationLocation;
+//        this.departureDateAndTime = departureDateAndTime;
+//        this.status = status;
+//        this.departureLocation = departureLocation;
+//        this.seatNumber = seatNumber;
+    ticket(String pnr, String destinationLocation,String departureLocation,String departureDateAndTime,String status, String seatNumber){
         this.pnrNumber = pnr;
-        this.Passenger = passenger;
-        this.ticketPrice = ticketPrice;
-        this.destinationLocation = destinationLocation;
         this.departureDateAndTime = departureDateAndTime;
-        this.status = status;
         this.departureLocation = departureLocation;
-        this.seatNUmber = seatNUmber;
+        this.destinationLocation = destinationLocation;
+        this.seatNumber = seatNumber;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
+

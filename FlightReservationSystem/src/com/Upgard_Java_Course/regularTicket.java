@@ -1,16 +1,8 @@
 package com.Upgard_Java_Course;
 
-public class regularTicket {
-    private String pnrNumber;
-
-    public String getPnrNumber() {
-        return pnrNumber;
-    }
-
-    public void setPnrNumber(String pnrNumber) {
-        this.pnrNumber = pnrNumber;
-    }
-
+public class regularTicket extends ticket {
+    private String specialService;
+    flight Flight;
     public String getSpecialService() {
         return specialService;
     }
@@ -19,22 +11,11 @@ public class regularTicket {
         this.specialService = specialService;
     }
 
-    private String specialService;
-    flight Flight;
-
-
-    regularTicket(String pnr, String specialService, flight Flight){
-        this.pnrNumber = pnr;
+    regularTicket(String pnr,String departurelocation, String departuredateAndTime, String destinationLocation, String status,String seatNumber, String specialService, flight Flight){
+        super(pnr,destinationLocation,departurelocation,departuredateAndTime,status,seatNumber);
         this.specialService = specialService;
         this.Flight = Flight;
     }
 
-    public String getSpecialServices(){
-        return  specialService;
-    }
 
-    public void updateSpecialService(String input){
-        specialService = input;
-
-    }
 }
