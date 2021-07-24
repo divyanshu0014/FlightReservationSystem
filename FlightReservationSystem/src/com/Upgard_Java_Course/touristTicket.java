@@ -21,6 +21,9 @@ public class touristTicket extends ticket {
 
 
 
+    touristTicket(){
+
+    }
         touristTicket(String pnr,String departurelocation, String departuredateAndTime, String destinationLocation, String status,String seatNumber , String hotelAddress, flight Flight){
         super(pnr,destinationLocation,departurelocation,departuredateAndTime,status,seatNumber);
         this.hotelAddress = hotelAddress;

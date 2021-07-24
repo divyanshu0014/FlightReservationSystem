@@ -86,7 +86,7 @@ public abstract class ticket {
         this.ticketPrice = ticketPrice;
     }
 
-//    ticket(){}
+    ticket(){}
 
 //    ticket(String pnr,passenger passenger,String departureDateAndTime,String departureLocation,String destinationLocation, String status, int ticketPrice,String seatNumber){
 //        this.pnrNumber = pnr;

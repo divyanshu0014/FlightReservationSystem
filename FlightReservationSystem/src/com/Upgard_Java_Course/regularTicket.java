@@ -11,6 +11,9 @@ public class regularTicket extends ticket {
         this.specialService = specialService;
     }
 
+    regularTicket(){
+
+    }
     regularTicket(String pnr,String departurelocation, String departuredateAndTime, String destinationLocation, String status,String seatNumber, String specialService, flight Flight){
         super(pnr,destinationLocation,departurelocation,departuredateAndTime,status,seatNumber);
         this.specialService = specialService;
