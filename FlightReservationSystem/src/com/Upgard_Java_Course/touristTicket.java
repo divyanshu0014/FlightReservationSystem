@@ -2,18 +2,43 @@ package com.Upgard_Java_Course;
 import java.util.Scanner;
 
 public class touristTicket {
-    String pnr;
+    private String pnr;
     String[] selectedLocations = new String[5];
-    String hotelAddress = "Hotel abc,Abc city,Abc";
+    private String hotelAddress = "Hotel abc,Abc city,Abc";
     Scanner sc = new Scanner(System.in);
     String name;
-
+    flight Flight;
     String[] newarr = new String[6];
+
+
+    public String getPnr() {
+        return pnr;
+    }
+
+    public void setPnr(String pnr) {
+        this.pnr = pnr;
+    }
+
+    public String getHotelAddress() {
+        return hotelAddress;
+    }
+
+    public void setHotelAddress(String hotelAddress) {
+        this.hotelAddress = hotelAddress;
+    }
+
+
+
     public touristTicket() {
 
 
     }
 
+    touristTicket(String pnr, String hotelAddress, flight Flight){
+        this.pnr = pnr;
+        this.hotelAddress = hotelAddress;
+        this.Flight = Flight;
+    }
 
     public void selectedPlaces() {
         for (int i = 0; i <= selectedLocations.length-1; i++) {
